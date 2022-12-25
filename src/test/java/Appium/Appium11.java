@@ -19,7 +19,7 @@ public class Appium11 {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "RealDevice");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        capabilities.setCapability(MobileCapabilityType.APP, "/Users/ayyildiz/IdeaProjects/AppiumTechpro/src/Apps/apiDemos.apk");
+        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\LENOVO\\IdeaProjects\\AppiumTechpro\\src\\Apps\\apiDemos.apk");
 //        capabilities.setCapability("appPackage", "com.davemac327.gesture.tool");
 //        capabilities.setCapability("appActivity", "com.davemac327.gesture.tool.GestureBuilderActivity");
         capabilities.setCapability("noReset","true");

@@ -26,6 +26,7 @@ public class Appium10 {
         capabilities.setCapability("noReset", "true");
 
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+       //AndroidDriver driver= getAndroidDriver();
         System.out.println("App installed...");
         //api demos butonuna tikla
         driver.findElementByXPath("//android.widget.TextView[@text='API Demos']").click();
@@ -37,15 +38,15 @@ public class Appium10 {
         driver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").click();
         Thread.sleep(5000);
         //wifi checkbox tikla
-        MobileElement wifiCheck = driver.findElementById("android:id/checkbox");
-        MobileElement wifiSettings = driver.findElementByXPath("//android.widget.TextView[@text='WiFi settings']");
+        MobileElement wifiCheck = (MobileElement) driver.findElementById("android:id/checkbox");
+        MobileElement wifiSettings = (MobileElement) driver.findElementByXPath("//android.widget.TextView[@text='WiFi settings']");
         if (wifiSettings.isEnabled()) {
             wifiSettings.click();
         } else {
             wifiCheck.click();
             wifiSettings.click();
         }
-        MobileElement wifiTextBox = driver.findElementById("android:id/edit");
+        MobileElement wifiTextBox = (MobileElement) driver.findElementById("android:id/edit");
         Thread.sleep(5000);
         wifiTextBox.sendKeys("text");
         Thread.sleep(5000);
